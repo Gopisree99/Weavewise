@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: weavewise-ai-backend
+    runtime: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: TRYON_CLOUD_PROVIDER
+        value: huggingface
+      - key: TRYON_MODEL
+        value: IDM-VTON
+      - key: TRYON_CLOUD_SPACE
+        value: yisol/IDM-VTON
+      - key: TRYON_CLOUD_TIMEOUT
+        value: "120"
+      - key: HF_TOKEN
+        sync: false
+      - key: CORS_ORIGINS
+        value: https://weavewise-ai.vercel.app,http://localhost:5173
+

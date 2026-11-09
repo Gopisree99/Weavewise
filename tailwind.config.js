@@ -1,0 +1,120 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        ivory: {
+          50: '#fdfdf8',
+          100: '#faf9f0',
+          200: '#f5f2e0',
+          300: '#ede8c8',
+          400: '#e2dab0',
+          500: '#d4c890',
+        },
+        indigo: {
+          900: '#1a1a4e',
+          800: '#1e2060',
+          700: '#252880',
+          600: '#2d31a6',
+          500: '#3539c4',
+          400: '#5558d4',
+          300: '#8082e2',
+          200: '#b0b2ef',
+          100: '#d8d9f7',
+          50: '#eeeef9',
+        },
+        teal: {
+          900: '#0a2e2e',
+          800: '#0d3d3d',
+          700: '#115252',
+          600: '#166666',
+          500: '#1a8080',
+          400: '#209999',
+          300: '#2dbfbf',
+          200: '#66d9d9',
+          100: '#99e8e8',
+          50: '#ccf4f4',
+        },
+        terracotta: {
+          900: '#3d1a0d',
+          800: '#5c2512',
+          700: '#7a3018',
+          600: '#994022',
+          500: '#b85030',
+          400: '#cc6644',
+          300: '#d98868',
+          200: '#e6aa90',
+          100: '#f2ccb8',
+          50: '#f9e6d8',
+        },
+        gold: {
+          900: '#3d2d00',
+          800: '#5c4400',
+          700: '#7a5c00',
+          600: '#997500',
+          500: '#b89000',
+          400: '#ccaa22',
+          300: '#d9c044',
+          200: '#e6d488',
+          100: '#f2e8bb',
+          50: '#f9f4dd',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Playfair Display', 'Georgia', 'serif'],
+        devanagari: ['Noto Sans Devanagari', 'sans-serif'],
+        telugu: ['Noto Sans Telugu', 'sans-serif'],
+        tamil: ['Noto Sans Tamil', 'sans-serif'],
+        kannada: ['Noto Sans Kannada', 'sans-serif'],
+        malayalam: ['Noto Sans Malayalam', 'sans-serif'],
+        bengali: ['Noto Sans Bengali', 'sans-serif'],
+      },
+      backgroundImage: {
+        'weave-pattern': "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c4a882' fill-opacity='0.08'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+        'textile-pattern': "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b89000' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-up': 'slideUp 0.4s ease-out',
+        'slide-in-right': 'slideInRight 0.4s ease-out',
+        'shimmer': 'shimmer 2s infinite',
+        'float': 'float 3s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideInRight: {
+          '0%': { opacity: '0', transform: 'translateX(20px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-6px)' },
+        },
+      },
+      boxShadow: {
+        'card': '0 4px 20px rgba(0,0,0,0.08)',
+        'card-hover': '0 8px 30px rgba(0,0,0,0.15)',
+        'glow-indigo': '0 0 20px rgba(53,57,196,0.3)',
+        'glow-gold': '0 0 20px rgba(184,144,0,0.3)',
+      },
+    },
+  },
+  plugins: [],
+}
+
